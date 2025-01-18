@@ -143,4 +143,4 @@ rules = {
     11: "bizz",
 }
 
-find_buzz(n=10000, mapped=True, rules=rules)
+find_buzz(n=10000, mapped=False, rules=rules)
