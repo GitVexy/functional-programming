@@ -49,7 +49,7 @@ def find_buzz(n: int, mapped: bool, rules: Dict[int, str]):
         output = process_indices(i, output, all_fizzes, all_fizzes_indices)
         print(output)
 
-    display_results(all_fizzes_indices)
+    display_results(all_fizzes_indices, n, mapped)
 
 
 def get_all_fizzes(rules: Dict[int, str]) -> Tuple[str, List[int]]:
@@ -116,7 +116,7 @@ def process_indices(i: int, output: str, all_fizzes: str, all_fizzes_indices: Li
     return output
 
 
-def display_results(all_fizzes_indices: List[int]):
+def display_results(all_fizzes_indices: List[int], n: int, mapped: bool):
     """
     Display the indices where all rules were satisfied or indicate if none were met.
 
@@ -128,6 +128,7 @@ def display_results(all_fizzes_indices: List[int]):
     """
 
     if all_fizzes_indices:
+        print(f"\nfind_buzz with n = {n}, mapped = {mapped}\n\nRules: {rules}\n")
         print("\nAll rules met at indices:")
         print("\n".join(map(str, all_fizzes_indices)))
 

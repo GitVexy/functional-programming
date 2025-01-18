@@ -10004,6 +10004,11 @@ fizzbazz
 fizzfozzbizz
 buzz
 
+find_buzz with n = 10000, mapped = False
+
+Rules: {3: 'fizz', 5: 'buzz', 7: 'bazz', 9: 'fozz', 11: 'bizz'}
+
+
 All rules met at indices:
 3465
 6930
