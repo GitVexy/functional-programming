@@ -127,13 +127,13 @@ def display_results(all_fizzes_indices: List[int], n: int, mapped: bool):
         The indices where all rules were satisfied, or a message indicating no matches.
     """
 
+    print(f"\nfind_buzz with n = {n}, mapped = {mapped}\n\nRules: {rules}\n")
     if all_fizzes_indices:
-        print(f"\nfind_buzz with n = {n}, mapped = {mapped}\n\nRules: {rules}\n")
         print("\nAll rules met at indices:")
         print("\n".join(map(str, all_fizzes_indices)))
 
     else:
-        print("\nNo indices met all rules...")
+        print("\nNo indices met all rules...\n")
 
 
 rules = {
@@ -144,4 +144,4 @@ rules = {
     11: "bizz",
 }
 
-find_buzz(n=10000, mapped=False, rules=rules)
+find_buzz(n=100, mapped=False, rules=rules)
