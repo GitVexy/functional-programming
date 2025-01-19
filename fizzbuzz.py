@@ -134,7 +134,6 @@ def display_results(all_fizzes_indices: List[int], n: int, mapped: bool):
 
     else:
         print("\nNo indices met all rules...\n")
-        print("\nNo indices met all rules...\n")
 
 
 rules = {
@@ -145,5 +144,4 @@ rules = {
     11: "bizz",
 }
 
-find_buzz(n=100, mapped=False, rules=rules)
 find_buzz(n=100, mapped=False, rules=rules)
