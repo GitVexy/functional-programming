@@ -7,20 +7,15 @@ def first_reverse_string(s):
     return output
 
 
-print(first_reverse_string("A succulent Chinese meal!"))
 
-def solution_reverse_string(s): # Written after checking solution
+def solution_reverse_string(s: str) -> str:
     """Recursively reverses a string
-
-    Args:
-        s (string)
-
-    Returns:
-        reversed string
+    Args:     string
+    Returns:  string
     """
     print(s)
-    
     if s == "":
         return s
-
     return solution_reverse_string(s[1:]) + s[0]
+
+print(solution_reverse_string("A succulent Chinese meal!"))
