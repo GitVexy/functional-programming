@@ -18,4 +18,4 @@ def solution_reverse_string(s: str) -> str:
         return s
     return solution_reverse_string(s[1:]) + s[0]
 
-print(solution_reverse_string("A succulent Chinese meal!"))
+print(first_reverse_string("A succulent Chinese meal!"))

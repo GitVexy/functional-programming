@@ -1,5 +1,9 @@
 def get_logger(formatter):
-    pass
+    
+    def logger(s1: str, s2: str) -> None:
+        print(formatter(s1, s2))
+    
+    return logger
 
 
 # Don't edit below this line
