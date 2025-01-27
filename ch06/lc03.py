@@ -1,4 +1,4 @@
-def css_styles(initial_styles: dict):
+def css_styles(initial_styles: dict) -> callable:
     styles = initial_styles.copy()
     
     def add_style(selector: str, property: str, value: str) -> dict:
@@ -10,3 +10,6 @@ def css_styles(initial_styles: dict):
         return styles
     
     return add_style
+
+print(css_styles({})("head", "title", "Hello World"))
+
