@@ -14,7 +14,7 @@ def is_even_string(x=1) -> bool:
         str(x).endswith("0") or
         str(x).endswith("2") or
         str(x).endswith("4") or
-        str(x).endswith("6") or                                                                          #
+        str(x).endswith("6") or
         str(x).endswith("8")
         )
     
