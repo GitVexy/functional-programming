@@ -39,8 +39,8 @@ def line_number_check(doc: str = None,
 
 
 def doc_newline(document: str,
-                edit: dict) -> str:
-    # edit={line_number: integer}
+                edit: dict = {"line_number": int}
+                ) -> str:
     line_number = line_number_check(document, edit)
     split_lines = document.split("\n")
     split_lines.insert(line_number + 1, "")
@@ -49,11 +49,11 @@ def doc_newline(document: str,
 
 
 def doc_substitute(document: str,
-                   edit: dict) -> str:
-    # edit={ insert_text: string,
-    #        line_number: integer,
-    #        start: integer,
-    #        end: integer}
+                   edit: dict = {"insert_text": str,
+                                 "line_number": int,
+                                 "start": int,
+                                 "end": int}
+                   ) -> str:
     line_number = line_number_check(document, edit)
     split_lines = document.split("\n")
     edited_line = (
@@ -67,10 +67,10 @@ def doc_substitute(document: str,
 
 
 def doc_insert(document: str,
-               edit: dict) -> str:
-    # edit={ insert_text: string,
-    #        line_number: integer,
-    #        start: integer}
+               edit: dict = {"insert_text": str,
+                             "line_number": int,
+                             "start": int}
+               ) -> str:
     line_number = line_number_check(document, edit)
     split_lines = document.split("\n")
     edited_line = (
@@ -84,10 +84,10 @@ def doc_insert(document: str,
 
 
 def doc_delete(document: str,
-               edit: dict) -> str:
-    # edit={ line_number: integer,
-    #        start: integer,
-    #        end: integer}
+               edit: dict = {"line_number": int,
+                             "start": int,
+                             "end": int}
+               ) -> str:
     line_number = line_number_check(document, edit)
     split_lines = document.split("\n")
     edited_line = (
