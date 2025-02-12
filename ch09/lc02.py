@@ -31,8 +31,10 @@ def handle_edit(document: str,
 
 def line_number_check(doc: str = None,
                       edit: dict = None) -> None:
-    if (edit["line_number"] >= len(doc.split("\n")) or
-            edit["line_number"] < 0):
+    if (
+        edit["line_number"] >= len(doc.split("\n")) or
+        edit["line_number"] < 0
+    ):
         raise IndexError("line_number is out of range")
 
     return edit["line_number"]
